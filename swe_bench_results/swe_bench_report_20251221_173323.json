@@ -1,0 +1,27 @@
+{
+  "timestamp": "20251221_173323",
+  "dataset": "princeton-nlp/SWE-bench_Lite",
+  "total_tasks": 5,
+  "results": {
+    "raw_llm": {
+      "total": 5,
+      "passed": 4,
+      "failed": 1,
+      "errors": 0,
+      "score": 80.0,
+      "duration_minutes": 3.25
+    },
+    "spider_enhanced": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "errors": 0,
+      "score": 100.0,
+      "duration_minutes": 7.05
+    }
+  },
+  "improvement": {
+    "absolute": 20.0,
+    "relative": 25.0
+  }
+}
