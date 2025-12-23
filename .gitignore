@@ -1,14 +1,42 @@
-# Environment and secrets
+# =============================================================================
+# S.P.I.D.E.R. SDK - Security-First .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# SECURITY: Sensitive Data (NEVER COMMIT)
+# -----------------------------------------------------------------------------
 .env
-.env.local
 .env.*
 *.env
+.envrc
+secrets.json
+credentials.json
+config.local.json
+config.secret.*
 
-# API keys (never commit these!)
+# API Keys and Tokens
 *api_key*
+*apikey*
+*API_KEY*
 *secret*
+*SECRET*
+*token*
+*TOKEN*
+*.pem
+*.key
+*.crt
+id_rsa*
+*.ppk
 
+# Specific provider keys
+openai_key*
+anthropic_key*
+deepseek_key*
+google_key*
+
+# -----------------------------------------------------------------------------
 # Python
+# -----------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
@@ -29,43 +57,95 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual environments
+# -----------------------------------------------------------------------------
+# Virtual Environments
+# -----------------------------------------------------------------------------
 venv/
 ENV/
 env/
 .venv/
+.conda/
+conda-env/
 
-# IDE
+# -----------------------------------------------------------------------------
+# IDE and Editor
+# -----------------------------------------------------------------------------
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
+*.sublime-*
+.spyderproject
+.spyproject
 
+# -----------------------------------------------------------------------------
 # Testing
+# -----------------------------------------------------------------------------
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .nox/
+coverage.xml
+*.cover
+.hypothesis/
 
-# Docker
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.temp
-.spider_patch.tmp
-
-# Predictions and outputs
+# -----------------------------------------------------------------------------
+# SWE-bench Results (may contain sensitive paths)
+# -----------------------------------------------------------------------------
+swe_bench_results/
 predictions.json
 predictions_checkpoint.json
 *.checkpoint.json
+evaluation_results/
 
-# Jupyter
+# -----------------------------------------------------------------------------
+# Temporary and Output Files
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+.spider_patch.tmp
+*.bak
+*.orig
+
+# -----------------------------------------------------------------------------
+# OS Generated
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# Jupyter Notebooks
+# -----------------------------------------------------------------------------
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------------------------------------------------------------------
+# Research Papers (Local Only)
+# -----------------------------------------------------------------------------
+research-papers/
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+.docker/
+
+# -----------------------------------------------------------------------------
+# Node (if any JS tooling)
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+
